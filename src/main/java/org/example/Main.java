@@ -1,19 +1,25 @@
 package org.example;
+import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Please enter a number between 0-9 :");
+        Scanner myScan = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //Read user input as a string
+        String input = myScan.nextLine();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        //Parse the input to an integer
+        int MyNum = Integer.parseInt(input);
+
+        //Check if the number is between 0 and 9
+        if (MyNum >= 0 && MyNum<=9){
+            System.out.println("You entered : " + MyNum);
+        }
+        else{
+            System.out.println("Not a valid number entered");
         }
     }
 }
