@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int x=1;
-        while (x==1) {
+        while (true) {
             System.out.println("Please enter a number between 0-9 :");
             Scanner myScan = new Scanner(System.in);
             //Read user input as a string
@@ -17,8 +16,8 @@ public class Main {
             try {
                 int MyNum = Integer.parseInt(input);
                 if (MyNum >= 0 && MyNum <= 9) {
-                    System.out.println("You entered : " + MyNum);
-                    x=0;
+                     System.out.println("You entered : " + MyNum);
+                     return;
                 } else {
                     System.out.println("Not a valid number entered");
                 }
